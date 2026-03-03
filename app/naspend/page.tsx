@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import naspendMockup from '@/public/naspend-mockup.png';
 
 export default function NaspendLandingPage() {
   const playStoreLink = "https://play.google.com/store/apps/details?id=com.usalone.naspend";
@@ -65,7 +66,7 @@ export default function NaspendLandingPage() {
           </motion.div>
           
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8 }} className="mt-24 w-full rounded-[40px] overflow-hidden bg-[#F5EFE6] dark:bg-[#211B16] border border-[#EBE1D9] dark:border-[#352D27] p-2 md:p-8">
-             <Image src="/naspend-mockup.png" alt="Naspend Interface Features" width={1600} height={800} className="w-full h-auto object-contain rounded-[24px]" priority />
+             <Image src={naspendMockup} alt="Naspend Interface Features" width={1600} height={800} className="w-full h-auto object-contain rounded-[24px]" priority />
           </motion.div>
         </section>
 

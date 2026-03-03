@@ -8,6 +8,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
 import { Providers } from "./providers";
 import Image from 'next/image'; // Kéo công cụ Image của Next.js vào
+import naspendLogo from '@/public/naspend-logo.png';
 
 // --- COMPONENT NÚT CHUYỂN ĐỔI THEME CHUẨN M3 ---
 const ThemeToggle = () => {
@@ -118,8 +119,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </button>
               
               <Link href="/" className="flex items-center gap-3">
-                {/* Đã thay thế icon bằng Logo */}
-                <Image src="/naspend-logo.png" alt="Us Alone Logo" width={32} height={32} className="rounded-lg shadow-sm" priority />
+                <Image src={naspendLogo} alt="Us Alone Logo" width={32} height={32} className="rounded-lg shadow-sm" priority />
                 <span className="font-bold text-xl text-[#201A16] dark:text-[#EAE1D9]">Us Alone</span>
               </Link>
             </div>
@@ -145,9 +145,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     className="fixed top-0 left-0 w-[85%] max-w-[360px] h-full bg-[#F5EFE6] dark:bg-[#211B16] z-50 shadow-2xl rounded-r-3xl md:hidden flex flex-col"
                   >
                     <div className="p-4 pt-6 flex items-center gap-3">
-                       {/* Đã thay thế icon bằng Logo (cho giao diện mobile trượt) */}
-                       <Image src="/naspend-logo.png" alt="Us Alone Logo" width={32} height={32} className="rounded-lg shadow-sm ml-4" priority />
-                       <span className="font-bold text-xl text-[#201A16] dark:text-[#EAE1D9]">Us Alone</span>
+                      <Image src={naspendLogo} alt="Us Alone Logo" width={32} height={32} className="rounded-lg shadow-sm ml-4" priority />
+                      <span className="font-bold text-xl text-[#201A16] dark:text-[#EAE1D9]">Us Alone</span>
                     </div>
                     <SidebarContent />
                   </motion.aside>

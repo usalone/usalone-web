@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image'; // Thêm công cụ xử lý ảnh của Next.js
+import naspendLogo from '@/public/naspend-logo.png';
 
 export default function UsAloneHomepage() {
   const router = useRouter();
@@ -76,11 +77,10 @@ export default function UsAloneHomepage() {
           {/* KHU VỰC LOGO ĐÃ ĐƯỢC THAY THẾ */}
           <div className="w-full lg:w-1/3 flex justify-center">
             <Image 
-              src="/naspend-logo.png" 
+              src={naspendLogo} /* Đổi từ chuỗi sang biến naspendLogo (không có dấu ngoặc kép) */
               alt="Naspend App Logo" 
               width={220} 
               height={220} 
-              // Thêm bo góc lớn (như icon app điện thoại) và hiệu ứng nổi khi di chuột
               className="rounded-[48px] drop-shadow-2xl transition-transform hover:scale-105 duration-300 bg-white dark:bg-[#15120F] p-2" 
               priority
             />
